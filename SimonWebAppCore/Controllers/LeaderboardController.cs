@@ -23,21 +23,21 @@ namespace SimonWebAppCore.Controllers
                 {
                     new Player
                     {
-                        Id = 1,
+                        //Id = 1,
                         Name = "John",
                         Score = 18
                     },
 
                     new Player
                     {
-                        Id = 2,
+                        //Id = 2,
                         Name = "Jill",
                         Score = 3
                     },
 
                     new Player
                     {
-                        Id = 3,
+                        //Id = 3,
                         Name = "Jeff",
                         Score = 11
                     }
@@ -65,11 +65,10 @@ namespace SimonWebAppCore.Controllers
 
         // POST: Leaderboard/SaveScore
         [HttpPost]
-        public void SaveScore(Player test3)
+        public void SaveScore(Player player)
         {
-            //var test = name;
-            //var test2 = score;
-            var tes = test3;
+            _dbContext.Players.Add(player);
+            _dbContext.SaveChanges();            ;
         }
 
         //// GET: Leaderboard/Details/5
