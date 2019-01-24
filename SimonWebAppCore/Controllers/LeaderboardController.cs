@@ -48,10 +48,7 @@ namespace SimonWebAppCore.Controllers
                 _dbContext.SaveChanges();
             }
 
-            
-
-
-
+          
         }
 
         [HttpGet]
@@ -65,70 +62,13 @@ namespace SimonWebAppCore.Controllers
 
         // POST: Leaderboard/SaveScore
         [HttpPost]
-        public void SaveScore(Player player)
+        public ActionResult SaveScore(Player player)
         {
             _dbContext.Players.Add(player);
-            _dbContext.SaveChanges();            ;
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index");
         }
-
-        //// GET: Leaderboard/Details/5
-        //public ActionResult Details(int id)
-        //{
-        //    return View();
-        //}
-
-        //// GET: Leaderboard/Create
-        //public ActionResult Create()
-        //{
-        //    return View();
-        //}
-
-
-
-        //// GET: Leaderboard/Edit/5
-        //public ActionResult Edit(int id)
-        //{
-        //    return View();
-        //}
-
-        //// POST: Leaderboard/Edit/5
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Edit(int id, IFormCollection collection)
-        //{
-        //    try
-        //    {
-        //        // TODO: Add update logic here
-
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
-
-        //// GET: Leaderboard/Delete/5
-        //public ActionResult Delete(int id)
-        //{
-        //    return View();
-        //}
-
-        //// POST: Leaderboard/Delete/5
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Delete(int id, IFormCollection collection)
-        //{
-        //    try
-        //    {
-        //        // TODO: Add delete logic here
-
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
+   
+       
     }
 }
