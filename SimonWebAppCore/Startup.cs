@@ -43,7 +43,7 @@ namespace SimonWebAppCore
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Simon}/{action=Index}/{id?}");
             });
         }
     }
