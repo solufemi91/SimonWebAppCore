@@ -33,7 +33,7 @@ body{
 }
 
 
-.instructions{
+#leaderBoard{
   margin-top: 308px;
   background: green;
   padding: 10px 30px;

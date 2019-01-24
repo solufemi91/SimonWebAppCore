@@ -1,0 +1,27 @@
+﻿@using SimonWebAppCore.Models
+
+@{
+    ViewData["Title"] = "Leaderboard";
+    var players = ViewBag.players;
+}
+
+<div class="container">
+
+    <table>
+        <tr>
+            <th class="tableText">Player</th>
+            <th class="tableText">Score</th>
+        </tr>
+
+
+        @foreach (var player in players)
+        {
+            <tr>
+                <td class="tableText">@player.Name</td> 
+                <td class="tableText">@player.Score</td>
+            </tr>
+        }
+
+    </table>
+
+</div>
