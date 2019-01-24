@@ -62,6 +62,16 @@ namespace SimonWebAppCore.Controllers
             return View();
         }
 
+
+        // POST: Leaderboard/SaveScore
+        [HttpPost]
+        public void SaveScore(Player test3)
+        {
+            //var test = name;
+            //var test2 = score;
+            var tes = test3;
+        }
+
         //// GET: Leaderboard/Details/5
         //public ActionResult Details(int id)
         //{
@@ -74,22 +84,7 @@ namespace SimonWebAppCore.Controllers
         //    return View();
         //}
 
-        //// POST: Leaderboard/Create
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Create(IFormCollection collection)
-        //{
-        //    try
-        //    {
-        //        // TODO: Add insert logic here
 
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
 
         //// GET: Leaderboard/Edit/5
         //public ActionResult Edit(int id)

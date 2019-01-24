@@ -20,6 +20,11 @@ Vue.component('game', {
       </thead>
     </table>
     <a href="./Index"><button id="back" type="button" name="button">Go back to the homepage</button></a>
+    <form action="./Leaderboard" method="post" enctype='application/json'>
+      First name: <input type="text" name="name"><br>
+      Score: <input type="number" name="score"><br>
+      <input type="submit" value="Submit">
+    </form>
   </div>`,
 
     data() {
