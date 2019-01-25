@@ -21,8 +21,8 @@ Vue.component('game', {
     </table>
     <a href="./Index"><button id="back" type="button" name="button">Go back to the homepage</button></a>
     <form action="./Leaderboard" method="post" enctype='application/json'>
-      First name: <input type="text" name="name"><br>
-      Score: <input type="number" name="score"><br>
+      First name: <input type="text" name="name" value=""><br>
+      Score: <input type="number" name="score" :value="totalscore" readonly><br>
       <input type="submit" value="Submit">
     </form>
   </div>`,
@@ -47,6 +47,7 @@ Vue.component('game', {
             totalscore: 0,
             congrats: false,
             lostRound: false
+           
         }
     },
 
