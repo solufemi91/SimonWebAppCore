@@ -20,10 +20,10 @@ Vue.component('game', {
       </thead>
     </table>
     <a href="./Index"><button id="back" type="button" name="button">Go back to the homepage</button></a>
-    <form action="./Leaderboard" method="post" enctype='application/json'>
+    <form id="saveScore" action="./Leaderboard" method="post" enctype='application/json'>
       First name: <input type="text" name="name" value=""><br>
       Score: <input type="number" name="score" :value="totalscore" readonly><br>
-      <input type="submit" value="Submit">
+      <input id="saveButton" type="submit" value="Save">
     </form>
   </div>`,
 
@@ -85,7 +85,6 @@ Vue.component('game', {
 
                 document.getElementById(this.boxIClicked = colour).style.backgroundColor = colour
 
-                //clickreg();
                 // this stores the choices made by the player that shall be later compared to the computer's random selections
                 this.playersChoice.push(colour);
                 this.indexCounter++;
@@ -100,7 +99,6 @@ Vue.component('game', {
                 this.correctClicks++;
                 // for e.g, on level 8, if 8 correct clicks are made, an alert message is displayed saying that the player has won the level of the game
                 if (this.correctClicks == this.level) {
-                    //$congratulationsMessage.html("Level " + level + " passed! Click Start to proceed to next level");
                     this.congrats = true
                     this.level++;
                     this.totalscore += this.correctClicks;
@@ -112,8 +110,6 @@ Vue.component('game', {
             else {
                 this.incorrectClicks++
                 this.lostRound = true
-                // $congratulationsMessage.html("Unfortunately you lost this round. Click start to try again")
-                // $displayMessage.html('Score ' + correctClicks);
 
             }
 

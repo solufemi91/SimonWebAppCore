@@ -177,3 +177,17 @@ td {
 .tableText{
     font-size: 66px;
 }
+
+
+#saveScore {
+    text-align: center;
+    margin-top: 55px;
+}
+
+#saveButton {
+    border-radius: 49px;
+    background-color: red;
+    margin-top: 58px;
+    height: 94px;
+    width: 94px;
+}
